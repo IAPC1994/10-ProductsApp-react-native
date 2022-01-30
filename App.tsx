@@ -4,6 +4,7 @@ import { LogBox } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { StackNavigator } from './src/router/StackNavigator';
 import { AuthProvider } from './src/context/AuthContext';
+import { ProductsProvider } from './src/context/ProductsContext';
 
 LogBox.ignoreAllLogs();
 
@@ -11,7 +12,9 @@ LogBox.ignoreAllLogs();
 const AppState = ({ children}: { children: JSX.Element | JSX.Element[] }) => {
   return(
     <AuthProvider>
-      { children }
+      <ProductsProvider>
+        { children }
+      </ProductsProvider>
     </AuthProvider>
   )
 }
