@@ -1,7 +1,7 @@
 import axios from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-const baseURL = 'https://cafe-mern-rniapc.herokuapp.com/api';
+const baseURL = '';
 
 const cafeApi = axios.create({ baseURL });
 
